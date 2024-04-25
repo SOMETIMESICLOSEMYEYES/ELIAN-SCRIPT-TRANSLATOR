@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elian Script Translator</title>
+    <style>
+@import url('https://fonts.cdnfonts.com/css/score-board');
+    body {
+    background-color: white;
+    color: green;
+    font-family: 'Score Board', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.element {
+    position: absolute;
+    animation: move 10s infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0) rotate(0);
+    }
+    25% {
+        transform: translate(50px, 50px) rotate(90deg);
+    }
+    50% {
+        transform: translate(100px, 100px) rotate(180deg);
+    }
+    75% {
+        transform: translate(150px, 150px) rotate(270deg);
+    }
+    100% {
+        transform: translate(200px, 200px) rotate(360deg);
+    }
+}
+
+.element:nth-child(1) {
+    top: 0;
+    left: 0;
+    font-size: 20px;
+}
+
+.element:nth-child(2) {
+    top: 20%;
+    left: 20%;
+    font-size: 40px;
+}
+
+.element:nth-child(3) {
+    top: 40%;
+    left: 40%;
+    font-size: 60px;
+}
+
+.element:nth-child(4) {
+    top: 60%;
+    left: 60%;
+    font-size: 80px;
+}
+
+.element:nth-child(5) {
+    top: 80%;
+    left: 80%;
+    font-size: 100px;
+}
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>elian script translator</h1>
+        <p> Developed by C. C. Elian, the Elian Script is a latin-based alternative style writing system that combines the art of motion derived from calligraphy and the linear nature of spelling. The formal structure of the script is obtained from arranging the 26 letters of the English alphabet in a nine-square grid. <p>
+      
+        <ul>
+            <p>The letters of the alphabet are positioned successively, beginning with the letter "A" in the bottom left corner of the grid at Box 1, moving upward to Box 3, down to Box 4, up to Box 6, and then down to Box 7, and ending at the top right corner at Box 9. Similarly, a second cycle begins at Box 1 with the letter "J" and ends at Box 9 with the letter "I," while a third cycle begins at Box 1 with the letter "S" and ends at Box 8 with the 26th letter "Z."<p>
+            <p>The letters of the second cycle of letters (J through R,) are indicated by changing the length of, at least ,one of the lines such that a box's lines are of unequal length.<p>
+            <p>the letters of the third cycle (S through Z),are indicated by adding a simple mark (dot, dash, etc.) to the set of unequal lines characteristic of the second cycle.
+<p>
+        <ul>
+        <h2>translate english to elian script</h2>
+        <textarea id="english-text" placeholder="Enter English text here"></textarea>
+        <button onclick="translateToElian()">Translate</button>
+        <div id="translated-text">
+        <div>
+    <div>
+
+    <script>
+        function translateToElian() {
+            const englishText = document.getElementById('english-text').value.toLowerCase();
+            const elianText = englishText.split('').map(char => {
+                if (char >= 'a' && char <= 'z') {
+                    return translateCharToElian(char);
+                } else {
+                    return char;
+                }
+            }).join('');
+            document.getElementById('translated-text').innerText = elianText;
+        }
+
+        function translateCharToElian(char) {
+            const elianMap = {
+                  a: "ﬧ",
+    b: "コ",
+    c: "┘",
+    d: "п",
+    e: "ߛ",
+    f: "ப",
+    g: "厂",
+    h: "ⵎ",
+    i: "ட",
+    j: "ᒣ",
+    k: "ᓗ",
+    l: "ᒧ",
+    m: "ᒉ",
+    n: "ᑭ",
+    o: "ᘂ",
+    p: "ᒥ",
+    q: "ᓕ",
+    r: "ᒪ",
+    s: "ᒭ",
+    t: "ᓘ",
+    u: "ᒨ",
+    v: "ᒕ",
+    w: "ᑮ",
+    x: "ᒎ",
+    y: "ᓟ",
+    z: "ᓛ",
+            };
+            return elianMap[char] || char;
+        }
+      
+      // Display translations on the board
+        function displayTranslation(english, elian) {
+            var translationList = document.getElementById("translations");
+            var newItem = document.createElement("li");
+            newItem.textContent = english + " → " + elian;
+            translationList.appendChild(newItem);
+        }
+    </script>
+</body>
+
+</html>

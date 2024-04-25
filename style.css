@@ -1,0 +1,129 @@
+h1 {
+  margin-top: 40px;
+  margin-bottom: 70px;
+  padding-top: 15px;
+  padding-right: 30px;
+  padding-left: 80px;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: darkgrey;
+  text-shadow: 1px 1px 2px white, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+a {
+  margin-left: 80px;
+  margin-right: 15px;
+  text-align: right;
+  color: silver;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue;
+}
+
+pre {
+  color: white;
+  margin-left: 55px;
+  text-shadow: 1px 1px 2px white, 0 0 25px blue, 0 0 5px darkblue;
+  max-width: 85%;
+  height: 81px;
+  text-align: center;
+  white-space: pre-wrap;
+  word-spacing: 8px;
+  word-wrap: break-word;
+  border-style: inset;
+  font-size: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  padding-top: 14px;
+  padding-left: 8px;
+  overflow-x: auto;
+}
+
+html {
+  font-family: 'Palatino';
+  font-size: 22px;
+  background-size: cover;
+}
+
+body {
+  font-family: 'Palatino';
+  width: 75%;
+  height: 100%;
+  min-width: 900px;
+  max-width: 100%;
+  position: static;
+  margin: 0 auto;
+  background-image: url('https://i.pinimg.com/originals/46/0c/bd/460cbd085e34e1610880f1b34ec8e79e.png');
+  background-size: cover;
+}
+
+.lastResult {
+  padding: 3px;
+  color: black;
+}
+
+button {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  font-family: 'Palatino';
+  margin-bottom: 7px;
+  margin-top: 7px;
+  padding: .25em;
+  color: initial;
+}
+
+input:focus:-webkit-input-placeholder {
+  color: transparent;
+}
+
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+
+input {
+  margin-left: 80px;
+  font-family: 'Palatino';
+  font-size: 25px;
+  color: white;
+  overflow: auto;
+  max-width: 800px;
+  margin-right: 80px;
+  margin-left: 80px;
+  resize: none;
+  text-align: left;
+  text-indent: 7px;
+  background-color: white;
+  border-style: inset;
+  background: rgb(0, 139, 139);
+  background: rgba(0, 139, 139, 0.3);
+}
+
+p {
+  background-color: white;
+  padding-left: 8px;
+  margin-right: 200px;
+  width: 275px;
+  border-style: solid;
+  border-width: 1px;
+  position: center;
+}
+
+#container {
+  display: block;
+  margin: auto;
+  height: 100%;
+  width: 75%;
+  height: 100%;
+  min-width: 900px;
+  max-width: 100%;
+  position: static;
+  margin: 0 auto;
+  border-style: inset;
+  background-image: url('https://i.imgur.com/iipgZmh.gif');
+  background-size: unset;
+}
+
+#submitButton {
+  margin-left: 75px;
+}
